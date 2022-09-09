@@ -1,3 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+body {
+  font-size: 18px;
+}
 
+.desktop {
+  display: none;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container #overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: calc(100% - 64px);
+  width: 100%;
+  background-image: linear-gradient(black 25%, transparent);
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 250ms ease, opacity 250ms ease;
+}
+#container header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 64px;
+  font-family: "Public Sans", sans-serif;
+  background: white;
+}
+#container header #nav-menu {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  position: absolute;
+  gap: 18px;
+  padding: 24px 0;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 87.2%;
+  visibility: hidden;
+  opacity: 0;
+  background: white;
+  color: hsl(233deg, 26%, 24%);
+  transition: visibility 250ms ease, opacity 250ms ease, top 250ms ease;
+  border-radius: 4px;
+}
+#container header #nav-menu.active {
+  visibility: visible;
+  opacity: 1;
+  top: 88px;
+}
+#container header #nav-menu li {
+  list-style-type: none;
+}
+#container header #hamburger-open {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 250ms ease, opacity 250ms ease;
+}
+#container header #hamburger-open.active {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+#container header #hamburger-close {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 250ms ease, opacity 250ms ease;
+}
+#container header #hamburger-close.active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+@media only screen and (min-width: 1440px) {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none !important;
+  }
+  #container header {
+    position: relative;
+    height: 80px;
+    justify-content: space-around;
+  }
+  #container header #nav-menu {
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    position: relative;
+    gap: 24px;
+    padding: 0;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: auto;
+    visibility: visible;
+    opacity: 1;
+    background: transparent;
+    color: hsl(233deg, 8%, 62%);
+    transition: none;
+    border-radius: none;
+    height: 100%;
+  }
+  #container header #nav-menu.active {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+  }
+  #container header #nav-menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+  }
+  #container header #nav-menu li::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(90deg, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+    opacity: 0;
+    transition: opacity 150ms ease;
+  }
+  #container header #nav-menu li:hover::after {
+    opacity: 1;
+  }
+  #container header a {
+    font-size: 15px;
+    text-decoration: none;
+    background-image: linear-gradient(90deg, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+    color: white;
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-weight: 400;
+    opacity: 1;
+    transition: opacity 150ms ease;
+  }
+  #container header a:hover {
+    opacity: 0.7;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
