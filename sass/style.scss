@@ -34,6 +34,7 @@ body{
         position: fixed;
         bottom: 0;
         left: 0;
+        z-index: 9998;
         height: calc(100% - 64px);
         width: 100%;
         background-image: linear-gradient(black 25%, transparent);
@@ -42,10 +43,29 @@ body{
         transition: visibility 250ms ease, opacity 250ms ease;
     }
 
+    .req-invite-button
+    {
+        font-size: 15px;
+        text-decoration: none;
+        background-image: linear-gradient(90deg, $lime-green, $bright-cyan);
+        color: white;
+        padding: 14px 32px;
+        border-radius: 24px;
+        font-weight: 400;
+        opacity: 1;
+        transition: opacity 150ms ease;
+
+        &:hover
+        {
+            opacity: 0.7;
+        }
+    }
+
     header
     {
         position: sticky; 
         top: 0;
+        z-index: 9999;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -108,6 +128,66 @@ body{
                 display: block;
                 opacity: 1;
                 visibility: visible;
+            }
+        }
+    }
+
+    #hero
+    {
+        display: flex;
+        flex-flow: column;
+        height: 670px;
+        font-family: $public-sans;
+        overflow: hidden;
+
+        #hero__img__container
+        {
+            @include center;
+            position: relative;
+            flex: 1;
+
+            #mobile-bg
+            {
+                position: absolute;
+                width: 100%;
+                height: 423px;
+                margin-top: -40px;
+            }
+
+            #mockups
+            {
+                position: absolute;
+                top: -122px;
+            }
+        }
+
+        #cta-container
+        {
+            flex: 1;
+            #cta
+            {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                margin-top: -10px;
+                gap: 1em;
+                h1
+                {
+                    color: $dark-blue;
+                    font-weight: 300;
+                    text-align: center;
+                    font-size: 39px;
+                }
+                
+                p
+                {
+                    color: $grayish-blue;
+                    text-align: center;
+                    max-width: 35ch;
+                    font-size: 15px;
+                    line-height: 25px;
+                    margin-bottom: 10px;
+                }
             }
         }
     }
@@ -178,22 +258,68 @@ body{
                     }
                 }
             }
+        }
 
-            a
+        #hero
+        {
+            flex-flow: row-reverse;
+            height: 656px;
+            overflow-y: hidden;
+    
+            #hero__img__container
             {
-                font-size: 15px;
-                text-decoration: none;
-                background-image: linear-gradient(90deg, $lime-green, $bright-cyan);
-                color: white;
-                padding: 14px 32px;
-                border-radius: 24px;
-                font-weight: 400;
-                opacity: 1;
-                transition: opacity 150ms ease;
+                flex: 1;
 
-                &:hover
+                #bg-intro-desktop-container
                 {
-                    opacity: 0.7;
+                    overflow: hidden;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+
+                    #desktop-bg
+                    {
+                        position: absolute;
+                        top: -250px;
+                        left: -72px;
+                    }
+                }
+    
+                #mockups
+                {
+                    position: absolute;
+                    top: -122px;
+                    left: 0;
+                }
+            }
+
+            #cta-container
+            {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                #cta
+                {
+                    align-items: flex-start;
+                    gap: 1.5em;
+                    position: absolute;
+                    right: 100px;
+
+                    h1
+                    {
+                        text-align: left;
+                        font-size: 60px;
+                    }
+                    
+                    p
+                    {
+                        text-align: left;
+                        max-width: 41ch;
+                        font-size: 18px;
+                        line-height: 28px;
+                    }
                 }
             }
         }

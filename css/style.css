@@ -17,6 +17,7 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 9998;
   height: calc(100% - 64px);
   width: 100%;
   background-image: linear-gradient(black 25%, transparent);
@@ -24,9 +25,24 @@ body {
   visibility: hidden;
   transition: visibility 250ms ease, opacity 250ms ease;
 }
+#container .req-invite-button {
+  font-size: 15px;
+  text-decoration: none;
+  background-image: linear-gradient(90deg, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  color: white;
+  padding: 14px 32px;
+  border-radius: 24px;
+  font-weight: 400;
+  opacity: 1;
+  transition: opacity 150ms ease;
+}
+#container .req-invite-button:hover {
+  opacity: 0.7;
+}
 #container header {
   position: sticky;
   top: 0;
+  z-index: 9999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,6 +98,54 @@ body {
   display: block;
   opacity: 1;
   visibility: visible;
+}
+#container #hero {
+  display: flex;
+  flex-flow: column;
+  height: 670px;
+  font-family: "Public Sans", sans-serif;
+  overflow: hidden;
+}
+#container #hero #hero__img__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+#container #hero #hero__img__container #mobile-bg {
+  position: absolute;
+  width: 100%;
+  height: 423px;
+  margin-top: -40px;
+}
+#container #hero #hero__img__container #mockups {
+  position: absolute;
+  top: -122px;
+}
+#container #hero #cta-container {
+  flex: 1;
+}
+#container #hero #cta-container #cta {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: -10px;
+  gap: 1em;
+}
+#container #hero #cta-container #cta h1 {
+  color: hsl(233deg, 26%, 24%);
+  font-weight: 300;
+  text-align: center;
+  font-size: 39px;
+}
+#container #hero #cta-container #cta p {
+  color: hsl(233deg, 8%, 62%);
+  text-align: center;
+  max-width: 35ch;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -142,19 +206,52 @@ body {
   #container header #nav-menu li:hover::after {
     opacity: 1;
   }
-  #container header a {
-    font-size: 15px;
-    text-decoration: none;
-    background-image: linear-gradient(90deg, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
-    color: white;
-    padding: 14px 32px;
-    border-radius: 24px;
-    font-weight: 400;
-    opacity: 1;
-    transition: opacity 150ms ease;
+  #container #hero {
+    flex-flow: row-reverse;
+    height: 656px;
+    overflow-y: hidden;
   }
-  #container header a:hover {
-    opacity: 0.7;
+  #container #hero #hero__img__container {
+    flex: 1;
+  }
+  #container #hero #hero__img__container #bg-intro-desktop-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  #container #hero #hero__img__container #bg-intro-desktop-container #desktop-bg {
+    position: absolute;
+    top: -250px;
+    left: -72px;
+  }
+  #container #hero #hero__img__container #mockups {
+    position: absolute;
+    top: -122px;
+    left: 0;
+  }
+  #container #hero #cta-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #container #hero #cta-container #cta {
+    align-items: flex-start;
+    gap: 1.5em;
+    position: absolute;
+    right: 100px;
+  }
+  #container #hero #cta-container #cta h1 {
+    text-align: left;
+    font-size: 60px;
+  }
+  #container #hero #cta-container #cta p {
+    text-align: left;
+    max-width: 41ch;
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 
