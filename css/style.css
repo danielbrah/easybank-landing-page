@@ -13,6 +13,10 @@ body {
   box-sizing: border-box;
 }
 
+#container {
+  height: 200vh;
+  overflow: hidden;
+}
 #container #overlay {
   position: fixed;
   bottom: 0;
@@ -209,14 +213,15 @@ body {
   #container #hero {
     flex-flow: row-reverse;
     height: 656px;
-    overflow-y: hidden;
+    overflow: unset;
   }
   #container #hero #hero__img__container {
     flex: 1;
+    position: relative;
   }
   #container #hero #hero__img__container #bg-intro-desktop-container {
     overflow: hidden;
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
   }
@@ -225,10 +230,15 @@ body {
     top: -250px;
     left: -72px;
   }
-  #container #hero #hero__img__container #mockups {
+  #container #hero #hero__img__container #mockups-desktop-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  #container #hero #hero__img__container #mockups-desktop-container #mockups {
     position: absolute;
     top: -122px;
-    left: 0;
+    left: 90px;
   }
   #container #hero #cta-container {
     flex: 1;
