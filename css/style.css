@@ -15,7 +15,6 @@ body {
 
 #container {
   height: 200vh;
-  overflow: hidden;
 }
 #container #overlay {
   position: fixed;
@@ -158,6 +157,9 @@ body {
   }
   .mobile {
     display: none !important;
+  }
+  #container {
+    overflow: hidden;
   }
   #container header {
     position: relative;

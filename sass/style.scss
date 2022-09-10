@@ -30,7 +30,6 @@ body{
 #container
 {
     height: 200vh;
-    overflow: hidden;
     #overlay
     {
         position: fixed;
@@ -201,6 +200,7 @@ body{
     .mobile{display: none !important;}
     #container
     {
+        overflow: hidden;
         header
         {
             position: relative;
