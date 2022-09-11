@@ -13,9 +13,6 @@ body {
   box-sizing: border-box;
 }
 
-#container {
-  height: 200vh;
-}
 #container #overlay {
   position: fixed;
   bottom: 0;
@@ -43,8 +40,10 @@ body {
   opacity: 0.7;
 }
 #container header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 9999;
   display: flex;
   justify-content: space-between;
@@ -108,6 +107,7 @@ body {
   height: 670px;
   font-family: "Public Sans", sans-serif;
   overflow: hidden;
+  margin-top: 64px;
 }
 #container #hero #hero__img__container {
   display: flex;
@@ -149,6 +149,63 @@ body {
   font-size: 15px;
   line-height: 25px;
   margin-bottom: 10px;
+}
+#container #why-choose-easybank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Public Sans", sans-serif;
+  background: hsl(220deg, 16%, 96%);
+  height: 1305px;
+}
+#container #why-choose-easybank #why-choose-easybank-wrapper {
+  width: 89%;
+}
+#container #why-choose-easybank #why-choose-easybank-wrapper p {
+  color: hsl(233deg, 8%, 62%);
+  line-height: 25px;
+  font-size: 14px;
+}
+#container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-heading {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 64px;
+}
+#container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-heading h1 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 34px;
+  margin-bottom: 14px;
+  color: hsl(233deg, 26%, 24%);
+  max-width: 10ch;
+}
+#container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-heading p {
+  text-align: center;
+  max-width: 40ch;
+}
+#container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-info {
+  display: flex;
+  flex-flow: column;
+  gap: 32px;
+}
+#container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-info > * {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 20px;
+}
+#container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-info > * p {
+  max-width: 37ch;
+}
+#container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-info h1 {
+  text-align: center;
+  font-weight: 300;
+  color: hsl(233deg, 26%, 24%);
+  font-size: 22px;
+}
+#container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-info p {
+  text-align: center;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -264,6 +321,49 @@ body {
     max-width: 41ch;
     font-size: 18px;
     line-height: 28px;
+  }
+  #container #why-choose-easybank {
+    height: 676px;
+  }
+  #container #why-choose-easybank #why-choose-easybank-wrapper {
+    width: 78%;
+  }
+  #container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-heading {
+    align-items: flex-start;
+    margin-bottom: 64px;
+  }
+  #container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-heading h1 {
+    text-align: left;
+    font-size: 40px;
+    margin-bottom: 14px;
+    max-width: none;
+  }
+  #container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-heading p {
+    text-align: left;
+    max-width: 58ch;
+    font-size: 18px;
+  }
+  #container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-info {
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+  #container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-info > * {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  #container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-info > * p {
+    max-width: 27ch;
+    text-align: left;
+    font-size: 16px;
+  }
+  #container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-info h1 {
+    text-align: left;
+    font-weight: 300;
+    color: hsl(233deg, 26%, 24%);
+    font-size: 22px;
   }
 }
 
