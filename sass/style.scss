@@ -342,6 +342,7 @@ body{
             flex-flow: row-reverse;
             height: 656px;
             overflow: unset;
+            margin-top: 0px;
     
             #hero__img__container
             {
@@ -368,10 +369,10 @@ body{
                     position: relative;
                     width: 100%;
                     height: 100%;
-                    #mockups
+                    #mockups-desktop
                     {
                         position: absolute;
-                        top: -122px;
+                        top: -120px;
                         left: 90px;
                     }
                 }
