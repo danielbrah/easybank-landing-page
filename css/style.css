@@ -447,6 +447,7 @@ body {
   }
   #container #latest-articles #latest-articles-wrapper #articles .article {
     max-width: 255px;
+    cursor: pointer;
   }
   #container #latest-articles #latest-articles-wrapper #articles .article p {
     color: hsl(233deg, 8%, 62%);
@@ -467,6 +468,12 @@ body {
   }
   #container #latest-articles #latest-articles-wrapper #articles .article .article-info p {
     font-size: 12px;
+  }
+  #container #latest-articles #latest-articles-wrapper #articles .article .article-info h2 {
+    transition: color 150ms ease;
+  }
+  #container #latest-articles #latest-articles-wrapper #articles .article:hover .article-info h2 {
+    color: hsl(136deg, 65%, 51%);
   }
 }
 

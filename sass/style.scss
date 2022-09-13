@@ -572,6 +572,7 @@ body{
                     .article
                     {
                         max-width: 255px;
+                        cursor: pointer;
     
                         p
                         {
@@ -597,6 +598,13 @@ body{
                         {
                             padding: 0 26px;
                             p{font-size: 12px;}
+
+                            h2{transition: color 150ms ease;}
+                        }
+
+                        &:hover .article-info h2
+                        {
+                            color: $lime-green;
                         }
                     }
                 }
