@@ -470,7 +470,7 @@ body {
     font-size: 12px;
   }
   #container #latest-articles #latest-articles-wrapper #articles .article .article-info h2 {
-    transition: color 150ms ease;
+    transition: color 150ms ease-in-out;
   }
   #container #latest-articles #latest-articles-wrapper #articles .article:hover .article-info h2 {
     color: hsl(136deg, 65%, 51%);

@@ -599,7 +599,7 @@ body{
                             padding: 0 26px;
                             p{font-size: 12px;}
 
-                            h2{transition: color 150ms ease;}
+                            h2{transition: color 150ms ease-in-out;}
                         }
 
                         &:hover .article-info h2
