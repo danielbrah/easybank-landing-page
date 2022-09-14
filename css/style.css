@@ -32,7 +32,7 @@ body {
   color: white;
   padding: 14px 32px;
   border-radius: 24px;
-  font-weight: 400;
+  font-weight: 700;
   opacity: 1;
   transition: opacity 150ms ease;
 }
@@ -270,6 +270,61 @@ body {
 #container #latest-articles #latest-articles-wrapper #articles .article .article-info p {
   font-size: 12px;
   line-height: 18px;
+}
+#container footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 32px;
+  height: 509px;
+  background: hsl(233deg, 26%, 24%);
+  font-family: "Public Sans", sans-serif;
+}
+#container footer #footer-piece-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 32px;
+}
+#container footer #footer-piece-1 #social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+#container footer #footer-piece-1 #social-media-links img {
+  height: 25px;
+  width: 25px;
+}
+#container footer #footer-piece-2 {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  color: hsl(220deg, 16%, 96%);
+}
+#container footer #footer-piece-2 h2 {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+#container footer #footer-piece-2 .footer-piece-2-section {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+#container footer #footer-piece-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 32px;
+}
+#container footer #footer-piece-3 h2 {
+  color: hsl(233deg, 8%, 62%);
+  font-size: 16px;
+  font-weight: 300;
 }
 
 @media only screen and (min-width: 1440px) {
