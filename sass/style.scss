@@ -249,6 +249,16 @@ body{
                     flex-flow: column;
                     align-items: center;
                     gap: 20px;
+                    transition: left 250ms ease, opacity 250ms ease;
+                    position: relative;
+                    left: -5px;
+                    opacity: 0;
+
+                    &.active
+                    {
+                        left: 0;
+                        opacity: 1;
+                    }
 
                     p{
                         max-width: 37ch;
@@ -295,10 +305,22 @@ body{
                 {
                     display: flex;
                     flex-flow: column;
+                    position: relative;
                     border-radius: 8px;
                     max-width: 29ch;
                     overflow: hidden;
                     height: 395px;
+                    top: -10px;
+                    left: -10px;
+                    opacity: 0;
+                    transition: top 250ms ease, left 250ms ease, opacity 250ms ease;
+
+                    &.active
+                    {
+                        top: 0;
+                        left: 0;
+                        opacity: 1;
+                    }
 
                     p
                     {
@@ -597,7 +619,8 @@ body{
                         align-items: flex-start;
                         gap: 20px;
     
-                        p{
+                        p
+                        {
                             max-width: 27ch;
                             text-align: left;
                             font-size: 15px;

@@ -194,6 +194,14 @@ body {
   flex-flow: column;
   align-items: center;
   gap: 20px;
+  transition: left 250ms ease, opacity 250ms ease;
+  position: relative;
+  left: -5px;
+  opacity: 0;
+}
+#container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-info > *.active {
+  left: 0;
+  opacity: 1;
 }
 #container #why-choose-easybank #why-choose-easybank-wrapper #why-choose-easybank-info > * p {
   max-width: 37ch;
@@ -233,10 +241,20 @@ body {
 #container #latest-articles #latest-articles-wrapper #articles .article {
   display: flex;
   flex-flow: column;
+  position: relative;
   border-radius: 8px;
   max-width: 29ch;
   overflow: hidden;
   height: 395px;
+  top: -10px;
+  left: -10px;
+  opacity: 0;
+  transition: top 250ms ease, left 250ms ease, opacity 250ms ease;
+}
+#container #latest-articles #latest-articles-wrapper #articles .article.active {
+  top: 0;
+  left: 0;
+  opacity: 1;
 }
 #container #latest-articles #latest-articles-wrapper #articles .article p {
   color: hsl(233deg, 8%, 62%);
