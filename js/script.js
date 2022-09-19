@@ -22,6 +22,12 @@ hamburgerClose.addEventListener('click', () =>{
     overlay.style.visibility = 'hidden'
 })
 
+const options = {
+    root: null,
+    threshold: 0, 
+    rootMargin: '-125px'
+}
+
 const observer = new IntersectionObserver((entries, observer) =>{
     entries.forEach(entry => {
 
@@ -36,7 +42,7 @@ const observer = new IntersectionObserver((entries, observer) =>{
             observer.unobserve(entry.target)
         }
     })
-})
+}, options)
 
 observer.observe(easyBankInfo)
 observer.observe(articles)
