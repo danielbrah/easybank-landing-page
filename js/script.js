@@ -33,7 +33,6 @@ const observer = new IntersectionObserver((entries, observer) =>{
 
         if (entry.isIntersecting)
         {
-            console.log('Executed')
             Array.from(entry.target.children).forEach((entry, number) =>{
                 entry.style.transitionDelay = `${(number / 4) - 0.05}s`
                 entry.classList.toggle('active')
