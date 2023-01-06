@@ -108,6 +108,7 @@ body {
   font-family: "Public Sans", sans-serif;
   overflow: hidden;
   margin-top: 64px;
+  background-color: #f3f4f6;
 }
 #container #hero #hero__img__container {
   display: flex;
