@@ -99,7 +99,6 @@ body {
 #container header #hamburger-close.active {
   display: block;
   opacity: 1;
-  visibility: visible;
 }
 #container #hero {
   display: flex;
