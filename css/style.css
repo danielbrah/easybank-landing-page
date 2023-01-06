@@ -99,6 +99,7 @@ body {
 #container header #hamburger-close.active {
   display: block;
   opacity: 1;
+  visibility: visible;
 }
 #container #hero {
   display: flex;
@@ -107,7 +108,7 @@ body {
   font-family: "Public Sans", sans-serif;
   overflow: hidden;
   margin-top: 64px;
-  background-color: #f3f4f6;
+  background-color: hsl(0deg, 0%, 98%);
 }
 #container #hero #hero__img__container {
   display: flex;
